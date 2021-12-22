@@ -11,14 +11,14 @@ if (isset($_POST['submit'])) {
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
     
-    $allowed = array('json'); 
+    $allowed = array('txt'); 
 
     if (in_array($fileActualExt, $allowed)) {
         if ($fileError === 0){
             if ($fileSize < 1000000) {
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
-                //$fileDestination ='uploads/'.$fileNameNew;
-                //move_uploaded_file($fileTmpName, $fileDestination);
+                $fileDestination ='uploads/'.$fileNameNew;
+                move_uploaded_file($fileTmpName, $fileDestination);
                 $data = file_get_contents($fileTmpName); 
                 $data = json_decode($data, true);
                 foreach($data as $row)
