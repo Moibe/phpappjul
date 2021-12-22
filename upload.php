@@ -18,6 +18,7 @@ if (isset($_POST['submit'])) {
             if ($fileSize < 1000000) {
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
                 $fileDestination ='uploads/'.$fileNameNew;
+                header("Location: next.php?uploadsuccess");
                 move_uploaded_file($fileTmpName, $fileDestination);
                 $data = file_get_contents($fileTmpName); 
                 $data = json_decode($data, true);
