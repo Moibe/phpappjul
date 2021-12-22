@@ -28,12 +28,12 @@ if (isset($_POST['submit'])) {
 
                
                 
-                if($inicio === 6310370){
+                /* if($inicio === 6310370){
                     header("Location: next.php?uploadsuccess");
                 }
                 else{
                     echo "No autorizado.";
-                }
+                } */
 
                 
             } else {
