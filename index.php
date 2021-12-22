@@ -8,7 +8,7 @@
     <title>Super Secure Cold Wallet</title>
 
     <!-- styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://simplepaperwallet.com/styles.css">
 
 
 
